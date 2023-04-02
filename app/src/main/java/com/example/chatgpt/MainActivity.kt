@@ -1,8 +1,8 @@
 package com.example.chatgpt
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.chatgpt.ui.main.MainFragment
+import androidx.appcompat.app.AppCompatActivity
+import com.example.chatgpt.ui.MainFragment
 
 class MainActivity : AppCompatActivity() {
 
