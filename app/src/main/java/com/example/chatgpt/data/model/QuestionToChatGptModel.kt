@@ -3,7 +3,7 @@ package com.example.chatgpt.data.model
 import com.example.chatgpt.utils.OpenAiUtils
 import java.io.Serializable
 
-data class RequestToChatModel(
+data class QuestionToChatGptModel(
     val max_tokens: Int = OpenAiUtils.maxTokens,
     val messages: List<ChatHistoryModel>,
     val model: String = OpenAiUtils.model,

@@ -1,7 +1,7 @@
 package com.example.chatgpt.di
 
 import android.content.Context
-import com.example.chatgpt.viewmodel.MainViewModel
+import com.example.chatgpt.viewmodel.ChatViewModel
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -23,6 +23,6 @@ interface AppComponent {
 
     }
 
-    fun inject(vm: MainViewModel)
+    fun inject(vm: ChatViewModel)
 
 }

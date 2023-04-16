@@ -6,15 +6,15 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.chatgpt.MyApp
-import com.example.chatgpt.domain.model.ChatModel
-import com.example.chatgpt.domain.model.UserChatModel
+import com.example.chatgpt.domain.model.presentation.ChatModel
+import com.example.chatgpt.domain.model.presentation.UserChatModel
 import com.example.chatgpt.domain.usecase.AskQuestionUseCase
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class MainViewModel(app: Application) : AndroidViewModel(app) {
+class ChatViewModel(app: Application) : AndroidViewModel(app) {
 
     init {
         MyApp.instance.appComponent.inject(this)

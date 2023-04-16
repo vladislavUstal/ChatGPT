@@ -1,4 +1,4 @@
-package com.example.chatgpt.data.model.mapper
+package com.example.chatgpt.domain.mapper
 
 interface IMapper<SRC, DST> {
     fun transform(data: SRC): DST

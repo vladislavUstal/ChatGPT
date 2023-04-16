@@ -1,4 +1,4 @@
-package com.example.chatgpt.domain.model
+package com.example.chatgpt.domain.model.presentation
 
 class AssistantChatModel(
     override val message: String,

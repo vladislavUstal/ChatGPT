@@ -1,7 +1,7 @@
 package com.example.chatgpt.data
 
-import com.example.chatgpt.data.model.OpenAiResponseModel
-import com.example.chatgpt.data.model.RequestToChatModel
+import com.example.chatgpt.data.model.ChatGptAnswerModel
+import com.example.chatgpt.data.model.QuestionToChatGptModel
 import com.example.chatgpt.utils.OpenAiUtils
 import io.reactivex.Single
 import retrofit2.http.Body
@@ -13,8 +13,8 @@ interface OpenAiApi {
     fun askQuestion(
         @Header("Content-Type") contentType: String = "application/json",
         @Header("Authorization") auth: String = OpenAiUtils.apiKey,
-        @Body body: RequestToChatModel
-    ): Single<OpenAiResponseModel>
+        @Body body: QuestionToChatGptModel
+    ): Single<ChatGptAnswerModel>
 
 
 }

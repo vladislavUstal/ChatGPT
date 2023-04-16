@@ -6,16 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.chatgpt.databinding.FragmentMainBinding
+import com.example.chatgpt.databinding.FragmentChatBinding
 import com.example.chatgpt.ui.adapter.AssistantMessagesAdapter
 import com.example.chatgpt.ui.adapter.UserMessagesAdapter
 import com.example.chatgpt.ui.adapter.delegate_adapter.CompositeDelegateAdapter
-import com.example.chatgpt.viewmodel.MainViewModel
+import com.example.chatgpt.viewmodel.ChatViewModel
 
-class MainFragment : Fragment() {
+class ChatFragment : Fragment() {
 
-    private lateinit var binding: FragmentMainBinding
-    private val viewModel: MainViewModel by viewModels()
+    private lateinit var binding: FragmentChatBinding
+    private val viewModel: ChatViewModel by viewModels()
     private val adapter = CompositeDelegateAdapter.Builder()
         .add(UserMessagesAdapter())
         .add(AssistantMessagesAdapter())
@@ -40,7 +40,7 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        binding = FragmentMainBinding.inflate(inflater)
+        binding = FragmentChatBinding.inflate(inflater)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
         binding.rv.adapter = adapter
@@ -49,7 +49,7 @@ class MainFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = ChatFragment()
     }
 
 }

@@ -1,7 +1,7 @@
 package com.example.chatgpt.di
 
 import com.example.chatgpt.domain.usecase.AskQuestionUseCase
-import com.example.chatgpt.repository.ChatRepository
+import com.example.chatgpt.data.repository.ChatRepository
 import dagger.Module
 import dagger.Provides
 

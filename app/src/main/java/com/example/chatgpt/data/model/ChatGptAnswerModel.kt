@@ -1,6 +1,6 @@
 package com.example.chatgpt.data.model
 
-data class OpenAiResponseModel(
+data class ChatGptAnswerModel(
     val choices: List<Choice>,
     val created: Int,
     val id: String,

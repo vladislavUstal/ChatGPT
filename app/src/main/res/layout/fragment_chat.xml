@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.example.chatgpt.viewmodel.MainViewModel" />
+            type="com.example.chatgpt.viewmodel.ChatViewModel" />
 
     </data>
 
@@ -15,7 +15,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainFragment">
+        tools:context=".ui.ChatFragment">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"

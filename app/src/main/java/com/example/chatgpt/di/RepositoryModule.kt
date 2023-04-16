@@ -4,7 +4,7 @@ import com.example.chatgpt.data.OpenAiApi
 import com.example.chatgpt.data.model.mapper.ChatHistoryToDTOMapper
 import com.example.chatgpt.data.model.mapper.DTOAnswerToAnswerMapper
 import com.example.chatgpt.data.repository_implementation.ChatRepositoryImpl
-import com.example.chatgpt.repository.ChatRepository
+import com.example.chatgpt.data.repository.ChatRepository
 import dagger.Module
 import dagger.Provides
 

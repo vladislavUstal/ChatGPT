@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.chatgpt.R
 import com.example.chatgpt.databinding.ItemAssistantMessageBinding
-import com.example.chatgpt.domain.model.AssistantChatModel
+import com.example.chatgpt.domain.model.presentation.AssistantChatModel
 import com.example.chatgpt.ui.adapter.delegate_adapter.BaseDelegateAdapter
 import com.example.chatgpt.ui.adapter.delegate_adapter.BaseViewHolder
 
