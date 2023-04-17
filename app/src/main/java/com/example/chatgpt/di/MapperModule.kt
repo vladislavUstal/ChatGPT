@@ -1,7 +1,9 @@
 package com.example.chatgpt.di
 
-import com.example.chatgpt.data.model.mapper.ChatHistoryToDTOMapper
-import com.example.chatgpt.data.model.mapper.DTOAnswerToAnswerMapper
+import com.example.chatgpt.domain.mapper.to_entity.MessagesToQuestionMapper
+import com.example.chatgpt.domain.mapper.to_entity.PresentationMessagesToSavedChatMapper
+import com.example.chatgpt.domain.mapper.to_presentation.AnswerToChatMapper
+import com.example.chatgpt.domain.mapper.to_presentation.SavedChatToPreviewChatMapper
 import dagger.Module
 import dagger.Provides
 
@@ -9,9 +11,17 @@ import dagger.Provides
 class MapperModule {
 
     @Provides
-    fun provideChatHistoryMapper(): ChatHistoryToDTOMapper = ChatHistoryToDTOMapper()
+    fun provideChatHistoryMapper(): MessagesToQuestionMapper = MessagesToQuestionMapper()
 
     @Provides
-    fun provideDTOChatHistoryMapper(): DTOAnswerToAnswerMapper = DTOAnswerToAnswerMapper()
+    fun provideDTOChatHistoryMapper(): AnswerToChatMapper = AnswerToChatMapper()
+
+    @Provides
+    fun provideChatEntityToChatMapper(): SavedChatToPreviewChatMapper =
+        SavedChatToPreviewChatMapper()
+
+    @Provides
+    fun provideChatToEntity(): PresentationMessagesToSavedChatMapper =
+        PresentationMessagesToSavedChatMapper()
 
 }
